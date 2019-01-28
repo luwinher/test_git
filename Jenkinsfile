@@ -9,7 +9,7 @@ pipeline {
     stage('git') {
       steps {
         dir(path: '/home/shiyanlou/test_git') {
-          git 'https://github.com/luwinher/test_git'
+          git 'git@github.com:luwinher/test_git'
         }
 
       }
@@ -19,7 +19,7 @@ pipeline {
         sh 'sudo -H pip install -r requirements.txt'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         sh 'python app.py'
       }
