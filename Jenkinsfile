@@ -19,7 +19,7 @@ pipeline {
         sh 'sudo -H pip install -r requirements.txt'
       }
     }
-    stage('error') {
+    stage('run') {
       steps {
         sh 'python app.py'
       }
